@@ -1,10 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
+import MobileNav from "@/components/MobileNav";
+
 export default function Home() {
   return (
-    <div className="noise min-h-screen bg-[#0b1120] text-slate-300">
+    <div className="noise min-h-screen bg-[#0b1120] text-slate-300 overflow-x-hidden">
       {/* ───── Navigation ───── */}
       <nav className="fixed top-0 left-0 right-0 z-50 glass border-b border-sky-500/10">
-        <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-3 sm:px-6 sm:py-4">
           <a href="#" className="text-lg font-bold tracking-tight text-white">
             S<span className="text-sky-400">.</span>S
           </a>
@@ -30,11 +32,12 @@ export default function Home() {
               Connect
             </a>
           </div>
+          <MobileNav />
         </div>
       </nav>
 
       {/* ───── Hero ───── */}
-      <section className="relative flex min-h-screen items-center overflow-hidden px-6">
+      <section className="relative flex min-h-screen items-center overflow-hidden px-4 sm:px-6">
         {/* Ambient orbs */}
         <div className="pointer-events-none absolute top-20 left-1/4 h-[600px] w-[600px] rounded-full bg-sky-600/10 blur-[150px]" />
         <div className="pointer-events-none absolute -bottom-20 right-1/4 h-[500px] w-[500px] rounded-full bg-indigo-600/10 blur-[130px]" />
@@ -47,7 +50,7 @@ export default function Home() {
               <span className="h-2 w-2 rounded-full bg-sky-400 animate-pulse" />
               Open to opportunities
             </div>
-            <h1 className="text-5xl font-bold leading-[1.1] tracking-tight text-white sm:text-6xl lg:text-7xl">
+            <h1 className="text-4xl font-bold leading-[1.1] tracking-tight text-white sm:text-5xl md:text-6xl lg:text-7xl">
               Shiksha<br />
               <span className="gradient-text">Sinha</span>
             </h1>
@@ -57,7 +60,7 @@ export default function Home() {
             <p className="mt-4 max-w-lg text-base leading-relaxed text-slate-500">
               Passionate about embedded systems, robotics, industrial automation, and PCB design. Building hardware solutions that bridge the digital and physical world.
             </p>
-            <div className="mt-8 flex flex-wrap items-center gap-4">
+            <div className="mt-8 flex flex-wrap items-center gap-3">
               <a
                 href="/shiksha-cv.docx"
                 download
@@ -109,7 +112,7 @@ export default function Home() {
       </section>
 
       {/* ───── Skills (Bento Grid) ───── */}
-      <section id="skills" className="relative py-24 px-6">
+      <section id="skills" className="relative py-16 px-4 sm:py-24 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <SectionHeader label="Expertise" title="Skills & Technologies" />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -139,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* ───── Experience (Timeline) ───── */}
-      <section id="experience" className="relative py-24 px-6">
+      <section id="experience" className="relative py-16 px-4 sm:py-24 sm:px-6">
         <div className="pointer-events-none absolute left-0 top-0 h-full w-full bg-gradient-to-b from-sky-600/[0.03] to-transparent" />
         <div className="relative mx-auto max-w-6xl">
           <SectionHeader label="Career" title="Internship Experience" />
@@ -182,7 +185,7 @@ export default function Home() {
       </section>
 
       {/* ───── Projects ───── */}
-      <section id="projects" className="relative py-24 px-6">
+      <section id="projects" className="relative py-16 px-4 sm:py-24 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <SectionHeader label="Work" title="Featured Projects" />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -215,7 +218,7 @@ export default function Home() {
       </section>
 
       {/* ───── Certifications ───── */}
-      <section id="certifications" className="relative py-24 px-6">
+      <section id="certifications" className="relative py-16 px-4 sm:py-24 sm:px-6">
         <div className="pointer-events-none absolute right-0 top-0 h-full w-full bg-gradient-to-b from-indigo-600/[0.03] to-transparent" />
         <div className="relative mx-auto max-w-6xl">
           <SectionHeader label="Credentials" title="Certifications" />
@@ -228,7 +231,7 @@ export default function Home() {
       </section>
 
       {/* ───── Achievements ───── */}
-      <section id="achievements" className="relative py-24 px-6">
+      <section id="achievements" className="relative py-16 px-4 sm:py-24 sm:px-6">
         <div className="mx-auto max-w-6xl">
           <SectionHeader label="Recognition" title="Achievements" />
           <div className="mt-12 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -255,7 +258,7 @@ export default function Home() {
       </section>
 
       {/* ───── Education ───── */}
-      <section id="education" className="relative py-24 px-6">
+      <section id="education" className="relative py-16 px-4 sm:py-24 sm:px-6">
         <div className="pointer-events-none absolute left-0 top-0 h-full w-full bg-gradient-to-b from-purple-600/[0.03] to-transparent" />
         <div className="relative mx-auto max-w-6xl">
           <SectionHeader label="Academics" title="Education" />
@@ -287,7 +290,7 @@ export default function Home() {
       </section>
 
       {/* ───── Footer ───── */}
-      <footer className="relative border-t border-sky-500/10 py-16 px-6">
+      <footer className="relative border-t border-sky-500/10 py-12 px-4 sm:py-16 sm:px-6">
         <div className="mx-auto flex max-w-6xl flex-col items-center gap-6 text-center">
           <h2 className="text-2xl font-bold text-white">Let&apos;s Connect</h2>
           <p className="max-w-md text-slate-500">
@@ -387,9 +390,9 @@ function ExperienceCard({
   tags: string[];
 }) {
   return (
-    <div className="timeline-line flex gap-5">
+    <div className="timeline-line flex gap-3 sm:gap-5">
       {/* Timeline dot */}
-      <div className="mt-1 flex shrink-0 flex-col items-center">
+      <div className="mt-1 hidden shrink-0 flex-col items-center sm:flex">
         <div className="h-10 w-10 rounded-xl bg-sky-500/10 border border-sky-500/20 flex items-center justify-center">
           <div className="h-2.5 w-2.5 rounded-full bg-sky-400" />
         </div>
